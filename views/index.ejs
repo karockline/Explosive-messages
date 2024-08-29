@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/content.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <title>Explosive Messages</title>
+</head>
+<body>
+  <%- include("partials/header.ejs") %>
+
+  
+  <div class="canvas">
+    <% if (locals.postMessage) { %>
+     <ul>
+      <li class="exploding-text">
+        <%= postMessage[0].tuit %>
+      </li>
+     </ul>      
+    <% } else { %>
+      <p class="exploding-text"> Click on me! and watch me explode</p>     
+      
+    <% }; %>
+  </div>
+
+  <div class="usuario">
+    <form action="/" method="POST" class="bigScreens mx-1 ">
+      <label>Write something to explode:</label> <br>
+      <textarea name="msj" class=" font-monospace form-control form-control-dark text-bg-dark"></textarea>
+      
+      <button type="submit" class="btn btn-warning">Post</button>
+      
+    </form>
+    <!--  
+    <div class="opciones">
+      <div class="opcion">
+        <h4>Goku</h4>
+        <p>あなたはやはりホンモノのサイヤ人の戦士だ 
+          Anata wa yahari honmono no saiyajin no senshi da 
+          You are a true Saiyan warrior</p>
+      </div>
+      <div class="opcion">
+        <h4>Pulp Fiction</h4>
+        <p>There's a passage I got memorized. Ezekiel 25:17.
+          "The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. 
+          Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of the darkness, for he is truly his brother's keeper and the finder of lost children. 
+          And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. 
+          And you will know I am the Lord when I lay My vengeance upon thee.</p>
+      </div>
+      <div class="opcion">
+        <h4>Soraya Montenegro (Maria la del barrio)</h4>
+        <p>¿Qué haces besando a la lisiada? ¡Maldita lisiada!
+          Escuincla babosa
+          Demuestrame tu poder satánico
+          Quítese, vieja zorra</p>
+      </div>
+    </div>-->
+
+  </div>
+
+   
+
+  <div id="root"></div>
+    <script src="bundle.js"></script>
+    <script src="/public/bundle.js"></script>
+    
+</main>
+
+<%- include("partials/footer.ejs") %>
+
+
+</body>
+</html>
