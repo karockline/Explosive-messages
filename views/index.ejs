@@ -11,6 +11,13 @@
 <body>
   <%- include("partials/header.ejs") %>
 
+  <div class="ejemplos mobile">
+    <form action="/" method="POST" class="buttons">
+      <button id="sayayin" type="submit" value="goku" name="choice"> <img src="/images/minigoku.png" alt=""></button>
+      <button id="pulp" type="submit" value="pulpFiction" name="choice"> <img src="/images/minijulespulp.png" alt=""></button>
+      <button id="sor" type="submit" value="soraya" name="choice"><img src="/images/minisoraya.png" alt=""></button>
+    </form>
+  </div>
   
   <div class="canvas">
     <% if (locals.postMessage) { %>
@@ -25,42 +32,22 @@
     <% }; %>
   </div>
 
-  <div class="usuario">
+  <div class="usuario bigScreen">
     <form action="/" method="POST" class="bigScreens mx-1 ">
       <label>Write something to explode:</label> <br>
-      <textarea name="msj" class=" font-monospace form-control form-control-dark text-bg-dark"></textarea>
-      
-      <button type="submit" class="btn btn-warning">Post</button>
-      
-    </form>
-    <!--  
-    <div class="opciones">
-      <div class="opcion">
-        <h4>Goku</h4>
-        <p>あなたはやはりホンモノのサイヤ人の戦士だ 
-          Anata wa yahari honmono no saiyajin no senshi da 
-          You are a true Saiyan warrior</p>
-      </div>
-      <div class="opcion">
-        <h4>Pulp Fiction</h4>
-        <p>There's a passage I got memorized. Ezekiel 25:17.
-          "The path of the righteous man is beset on all sides by the inequities of the selfish and the tyranny of evil men. 
-          Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of the darkness, for he is truly his brother's keeper and the finder of lost children. 
-          And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy My brothers. 
-          And you will know I am the Lord when I lay My vengeance upon thee.</p>
-      </div>
-      <div class="opcion">
-        <h4>Soraya Montenegro (Maria la del barrio)</h4>
-        <p>¿Qué haces besando a la lisiada? ¡Maldita lisiada!
-          Escuincla babosa
-          Demuestrame tu poder satánico
-          Quítese, vieja zorra</p>
-      </div>
-    </div>-->
-
+      <textarea name="msj" class=" font-monospace form-control form-control-dark text-bg-dark"></textarea>      
+      <button type="submit" class="btn btn-warning">Post</button>      
+    </form>   
   </div>
 
-   
+<div class="ejemplos bigScreen medium">
+  <form action="/" method="POST" class="buttons">
+    <button id="sayayin" type="submit" value="goku" name="choice"> <img src="/images/minigoku.png" alt="Goku"></button>
+    <button id="pulp" type="submit" value="pulpFiction" name="choice"> <img src="/images/minijulespulp.png" alt="Jules"></button>
+    <button id="sor" type="submit" value="soraya" name="choice"><img src="/images/minisoraya.png" alt="Soraya"></button>
+  </form>
+</div>
+  
 
   <div id="root"></div>
     <script src="bundle.js"></script>

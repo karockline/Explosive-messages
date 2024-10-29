@@ -15,7 +15,22 @@ let blogList = [];
 
 app.post('/', (req, res) => {
   console.log(req.body.msj);
-  const mensaje = req.body.msj;
+  var mensaje = req.body.msj;
+
+  switch(req.body.choice){
+    case "goku":
+      mensaje = "あなたはやはりホンモノのサイヤ人の戦士だ Anata wa yahari honmono no saiyajin no senshi da You are a true Saiyan warrior"
+    break;
+    case "pulpFiction":
+      mensaje = "Well, allow me to retort! What does Marsellus Wallace look like?  DOES. HE. LOOK. LIKE. A BITCH?!  NOOOOO! "
+    break;
+    case "soraya":
+      mensaje = "¡Maldita lisiada! ¡Escuincla babosa! ¡Demuestrame tu poder satánico!!! "
+    break;
+    default:
+    break;
+  }
+
   blogList.push({ tuit: mensaje });
 
   res.render("index.ejs", {
